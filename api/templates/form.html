@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="half">
+      <div class="form">
+        <h1 style="margin-top: 100px">Register yourself</h1>
+        <form method="POST" action="/formSubmission">
+          <input type="text" name="name" placeholder="Enter your name" />
+          <select name="village">
+            <option value="Rajainagar">Rajainagar</option>
+            <option value="dandupalya">dandupalya</option>
+            <option value="malleshwaram">malleshwaram</option>
+          </select>
+          <textarea
+            type="text"
+            name="work_exp"
+            placeholder="Enter your work expereince"
+          ></textarea>
+
+          <input
+            type="text"
+            name="aadhar_id"
+            placeholder="Enter your 12-digit Aadhar ID (Ex:111111111111)"
+            pattern="[0-9]{12}"
+          />
+
+          <input type="submit" value="Check Skill & Submit" id="butt" />
+        </form>
+      </div>
+    </div>
+    <div class="half2">
+      <div class="result">
+        <h1>
+          The AI Predicted Skill for {{name}} is :<br />
+          <span id="skill">{{skill}}</span>
+        </h1>
+      </div>
+    </div>
+    <script>
+      var skill = document.getElementById("skill");
+      skill.style.display = "none";
+      setTimeout(() => {
+        skill.style.display = "inline-block";
+      }, 2000);
+    </script>
+  </body>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: lightslategray;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    .half {
+      width: 49%;
+      height: 100%;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .half2 {
+      width: 49%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .result h1 {
+      font-size: 45px;
+      color: white;
+      text-align: center;
+    }
+
+    .form {
+      width: 85%;
+      height: 70%;
+      padding: 20px;
+      padding-bottom: 100px;
+      padding-top: 20px;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      /* justify-content: center; */
+      background-color: white;
+      box-shadow: 0px 0px 50px 3px rgba(80, 80, 80, 0.288);
+    }
+    #butt {
+      width: 300px;
+      padding: 15px;
+      background-color: lightgreen;
+      box-shadow: 0px 2px 0px 1px rgb(0, 228, 0);
+    }
+    #butt:hover {
+      box-shadow: none;
+      transform: scale(0.9);
+      transition: 0.1s ease;
+    }
+    .form input {
+      width: 94%;
+      padding: 10px;
+      margin: 10px;
+      outline: none;
+      border-radius: 7px;
+      border: 1px solid lightblue;
+    }
+    .form input:focus {
+      outline: 2px solid lightblue;
+    }
+    .form textarea {
+      width: 94%;
+      padding: 10px;
+      margin: 10px;
+      outline: none;
+      border-radius: 7px;
+      border: 1px solid lightblue;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .form select {
+      width: 97%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .half,
+      .half2 {
+        width: 100%;
+      }
+      .form {
+        width: 85%;
+      }
+    }
+  </style>
+</html>

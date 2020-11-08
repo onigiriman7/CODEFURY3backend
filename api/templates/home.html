@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="left">
+        <div class="leftimg"></div>
+        
+        <h1>
+            <a href="/formSubmission">
+            Help companies find you</a>
+        </h1>
+       
+    </div>
+    <div class="right">
+        <div class="rightimg"></div>
+        <h1>
+            <a href="https://helperbot2000.herokuapp.com">
+            Find the right workplace for you!</a>
+        </h1>
+        
+    </div>
+
+    
+</body>
+</html>
+
+<style>
+    body,html{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        overflow-x: hidden;
+    }
+    .left,.right{
+        width: 49.8%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid lightblue;
+        margin: 0;
+        overflow: hidden;
+        color:rgb(255, 255, 255);
+        
+    }
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    a:hover{
+        color: lightyellow;
+
+    }
+    .left h1,.right h1{
+        position: absolute;
+        font-size: 54px;
+        padding:20px;
+        text-shadow: 0px 3px 0px rgb(0, 0, 0), 0px 0px 10px black;
+       
+        text-align: center;
+        -webkit-text-stroke: 1px white;
+        font-weight: bolder;
+    }
+    .rightimg{
+        height: 100%;
+        width: 100%;
+        background-color: lightsteelblue;
+        background-size: cover;
+        color:rgb(250, 142, 100);
+        transition: 0.4s ease;
+        opacity: 0.9;
+    }
+    .leftimg{
+        height: 100%;
+        width: 100%;
+        background-color: lightslategray;
+        background-size: cover;
+        color:white;
+        transition: 0.4s ease;
+        opacity: 0.9;
+    }
+    .rightimg:hover, .leftimg:hover{
+        transform: scale(1.2);
+        transition: 0.4s ease;
+        opacity: 0.85;
+        cursor: alias;
+    }
+    #butt {
+        position: absolute;
+        top:68%;
+      width: 100px;
+      padding: 15px;
+      background-color: lightgreen;
+      box-shadow: 0px 2px 0px 1px rgb(0, 228, 0);
+    }
+    #butt:hover {
+      box-shadow: none;
+      transform: scale(0.9);
+      transition: 0.1s ease;
+    }
+    @media screen and (max-width: 600px) {
+      .left,
+      .right {
+        width: 100%;
+      }
+      .leftimg, .rightimg{
+          width: 100%;
+      }
+      h1{
+          font-size: 36px !important;
+          width: 60%;
+          text-align: justify;
+      }
+    }
+</style>
