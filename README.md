@@ -10,3 +10,11 @@ Our model's fuctionalities:
 - The worker registration and job-hunting website:
 https://covidxrayapi.herokuapp.com/
 - The company dashboard: https://codefury-3-frontend.vercel.app/
+
+## Authors:
+### The impressive front-end, backend, APIs and deployment.
+- Varun KJ: https://www.linkedin.com/in/varunkj3/ 
+- Pavan Srikanth: https://www.linkedin.com/in/pavan-srikanth-ab52491b1/
+
+### Generating the datasets, and creating the NLP models, i.e., the chatbot and skill classifier
+- Koushik Joshi: https://www.linkedin.com/in/koushik-joshi-b60b401b/ 
